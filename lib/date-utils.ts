@@ -43,3 +43,22 @@ export function calculateAge(birthDate: string, deathDate: string): number {
 
   return age;
 }
+
+export function formatAgeText(age: number): string {
+  const lastDigit = age % 10;
+  const lastTwoDigits = age % 100;
+
+  // Исключения для чисел от 11 до 19
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+    return `${age} лет жизни`;
+  }
+
+  // Правила для остальных чисел
+  if (lastDigit === 1) {
+    return `${age} год жизни`;
+  } else if (lastDigit >= 2 && lastDigit <= 4) {
+    return `${age} года жизни`;
+  } else {
+    return `${age} лет жизни`;
+  }
+}
