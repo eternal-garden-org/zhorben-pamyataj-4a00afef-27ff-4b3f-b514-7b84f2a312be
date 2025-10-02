@@ -103,11 +103,10 @@ export function MemorialHero({
                 </span>
                 <span className="font-bold text-white">{birthYear}</span>
                 <span className="font-light text-white"> – </span>
-                <span className="font-bold text-white">{deathYear}</span>
                 <span className="font-light" style={{ color: "#8B8B8B" }}>
-                  {" "}
-                  {deathDateFormatted}
+                  {deathDateFormatted}{" "}
                 </span>
+                <span className="font-bold text-white">{deathYear}</span>
               </div>
             </div>
 
